@@ -3483,8 +3483,8 @@ Shft | rerun    print*   print*   frame    frame    frame    remove   customize
   :after mw-jsy
   :general
   (:keymaps 'sb-prefix-map
-  "f" #'wsf-find-file
-  "R" #'wsf-force-from-scratch)
+            "f" #'wsf-find-file
+            "R" #'wsf-force-from-scratch)
   )
 
 
