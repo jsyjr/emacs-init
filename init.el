@@ -3488,6 +3488,16 @@ Shft | rerun    print*   print*   frame    frame    frame    remove   customize
   )
 
 
+;;;; my/workspace-shell
+
+(defun my/workspace-shell (WORKSPACE)
+  "Create or switch to a running shell process in WORKSPACE."
+  (interactive "BWorkspace: ")
+  (let ((default-directory (concat "/ws/" WORKSPACE "/")))
+    (shell WORKSPACE))
+  (load-library "mw-jsy"))
+
+
 ;;; === Unclassified ===================================================
 
 ;;{{{  Less safe: y/n instead of yes/no
