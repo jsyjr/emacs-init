@@ -1,0 +1,65 @@
+left-side | [ top | [ master+ | stack* ] | bottom ] | right
+
+ |  top  |
+ |-------|
+l|       |r
+e|managed|i
+f| area  |g
+t|       |h
+ |-------|t
+ |bottom |
+
+t/T: top
+r/R: right
+b/B: bottom
+l/L: left
+m/M: main
+s/S: stack
+
+
+which windows have mode-lines?
+
+Architectural model
+===================
+Main area is managed as:
+  - main area / master columns
+  - stack area / stack columns
+
+Areas are:
+  - hidden
+  - visible, minimized
+  - visible, maximized
+
+Commands:
+  - a: add / r: remove main column
+  - A: add / R: remove stack column
+  - h: hide area
+  - m: minimize area
+  - x: maximize area
+
+Current position
+================
+  - jump
+
+
+Window management
+=================
+Creation commands:
+  - new mast window at top / bottom of column
+  - new window at top / bottom of column
+
+Resizing commands: +/-
+  - move left   edge right / left
+  - move right  edge right / left
+  - move top    edge up    / down
+  - move bottom edge up    / down
+  New position is associated with state (minimized / maximized)
+
+
+move B to here
+move here to B
+dupe B here
+swap B here
+
+Promising keys: C-.  C-;
+
