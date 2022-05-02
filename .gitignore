@@ -1,0 +1,10 @@
+*.elc
+*~
+\#*\#
+recentf
+
+eln-cache/
+elpa/
+straight/
+transient/
+var/
