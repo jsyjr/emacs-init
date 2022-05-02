@@ -558,6 +558,7 @@ as in `defun'."
 (use-package popup
   :straight  (:host github :repo "auto-complete/popup-el"))
 
+
 ;;; === Protection =====================================================
 ;;;; Bostr: Backup On Save To Rcs
 ;; Remember to install rcs
@@ -2609,10 +2610,9 @@ Use a normal parenthesis if not inside any."
 ;;;; Magit: a git porcelain inside Emacs (Jonas Bernoulli)
 ;; https://github.com/magit/magit
 
-
 (use-package magit
   :straight (:host github :repo "magit/magit")
-  :requires (magit-process)     ;; not sure why this is necessary
+  :requires (magit-process compat) ;; not sure why this is necessary
   :custom
   (magit-auto-revert-mode t)
   (magit-backup-mode nil)
