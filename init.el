@@ -187,6 +187,10 @@
 
 
 ;;; === Package management via straight and use-package (not custom) ===
+;;;; Activate any packages install from an ELPA or MELPA
+
+(package-activate-all)
+
 ;;;; Straight: a next-generation package manager (Radon Rosborough)
 ;; https://github.com/raxod502/straight.el
 
