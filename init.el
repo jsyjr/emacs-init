@@ -559,14 +559,6 @@ as in `defun'."
   :straight  (:host github :repo "auto-complete/popup-el"))
 
 
-;;;; Compat: a general COMPATibility library (Philip Kaludercic)
-;; https://git.sr.ht/~pkal/compat
-
-(use-package compat
-  :straight (:host melpa :repro "gnu-elpa-mirror/compat")
-  :defer)
-
-
 ;;; === Protection =====================================================
 ;;;; Bostr: Backup On Save To Rcs
 ;; Remember to install rcs
