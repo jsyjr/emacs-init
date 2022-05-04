@@ -957,8 +957,8 @@ as in `defun'."
   :custom
   (default-frame-alist
    '((minibuffer . nil)
-     (frame-minibuffer-at-top . t)
-     (window-mode-line-at-top . t)
+     ;; (frame-minibuffer-at-top . t)
+     ;; (window-mode-line-at-top . t)
      (menu-bar-lines . 0)
      (tool-bar-lines . 0)
      (tab-bar-lines . 1)
