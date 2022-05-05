@@ -2201,29 +2201,6 @@ parses its input."
   (add-hook 'embark-collect-mode #'embark-consult-preview-minor-mode))
 
 ;;; === Buffers: selection, display and navigation =====================
-;;;; Ibuffer: operate on buffers like dired (Colin Walters)
-
-(use-package ibuffer
-  :straight (:type built-in)
-  :custom
-  (ibuffer-default-shrink-to-minimum-size t)
-  :bind
-  (("<f1>" . ibuffer-list-buffers)
-   :map ibuffer-mode-map
-   ("<f1>" . quit-window))
-  :config
-  (my/beginning-of-buffer
-    ibuffer (ibuffer-forward-line 1))
-  (my/end-of-buffer
-    ibuffer (ibuffer-backward-line 1)))
-
-;;;; Ibuffer-vc: group buffers in ibuffer list by VC project (Steve Purcell)
-;; https://github.com/purcell/ibuffer-vc
-
-(use-package ibuffer-vc
-  :straight (:host github :repo "purcell/ibuffer-vc"))
-
-
 ;;;; Improved beginning-of-buffer and end-of-buffer
 ;; https://fuco1.github.io/2017-05-06-Enhanced-beginning--and-end-of-buffer-in-special-mode-buffers-(dired-etc.).html
 ;; Web page has support for
@@ -2289,6 +2266,29 @@ toggle between real end and logical end of the buffer."
                  (lambda ()
                    (define-key ,mode-map
                                [remap end-of-buffer] ',fname))))))
+
+
+;;;; Ibuffer: operate on buffers like dired (Colin Walters)
+
+(use-package ibuffer
+  :straight (:type built-in)
+  :custom
+  (ibuffer-default-shrink-to-minimum-size t)
+  :bind
+  (("<f1>" . ibuffer-list-buffers)
+   :map ibuffer-mode-map
+   ("<f1>" . quit-window))
+  :config
+  (my/beginning-of-buffer
+    ibuffer (ibuffer-forward-line 1))
+  (my/end-of-buffer
+    ibuffer (ibuffer-backward-line 1)))
+
+;;;; Ibuffer-vc: group buffers in ibuffer list by VC project (Steve Purcell)
+;; https://github.com/purcell/ibuffer-vc
+
+(use-package ibuffer-vc
+  :straight (:host github :repo "purcell/ibuffer-vc"))
 
 
 ;;; === Completion =====================================================
