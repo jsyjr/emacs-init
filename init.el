@@ -2527,6 +2527,7 @@ Use a normal parenthesis if not inside any."
 ;; https://github.com/justbur/emacs-vdiff
 
 (use-package vdiff
+  :disabled
   :straight (:host github :repo "justbur/emacs-vdiff"))
 
 
@@ -2658,6 +2659,7 @@ Use a normal parenthesis if not inside any."
 ;; https://github.com/justbur/emacs-vdiff-magit
 
 (use-package vdiff-magit
+  :disabled
   :straight (:host github :repo "justbur/emacs-vdiff-magit")
   :requires (vdiff magit))
 
